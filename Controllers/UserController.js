@@ -20,7 +20,7 @@ const sendResetPasswordMail=async(name,email,token)=>{
             from:'vigneshfinal@gmail.com',
             to:email,
             subject:'For Reset password',
-            html:' Hi '+name+',please copy the link and <a href="http://localhost:3000/users/reset?'+token+'">reset your password</a>'
+            html:' Hi '+name+',please copy the link and <a href="https://profound-cactus-3c5bc1.netlify.app/'+token+'">reset your password</a>'
         }
         transporter.sendMail(mailoptions,function(error,info){
             if(error){

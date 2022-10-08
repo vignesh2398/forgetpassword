@@ -89,12 +89,12 @@ router.post('/reset',async(req,res)=>{
       res.status(200).send({success:true,msg:"password changed"})
     }
     else{
-      res.status(400).send({success:false,msg:"wrong token"})
+      res.status(200).send({success:false,msg:"wrong token"})
     }
   } catch (error) {
 
     
-    res.status(404).send(tokenData._id)
+    res.status(200).send(tokenData._id)
   }
 
     
